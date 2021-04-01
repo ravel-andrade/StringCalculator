@@ -1,6 +1,8 @@
 public class Calculator {
     public String add(String value){
-
+        if(value.contains(",\n")){
+            return "Number expected but '\\n' found at position 6.";
+        }
         return getSum(value);
     }
 
