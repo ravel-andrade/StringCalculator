@@ -5,7 +5,7 @@ public class Calculator {
 
     private String getSum(String value){
         Double sum = 0.0;
-        String[] values = value.split(",");
+        String[] values = value.split(",|\n");
         if(value.isEmpty()){
             return "0";
         }
