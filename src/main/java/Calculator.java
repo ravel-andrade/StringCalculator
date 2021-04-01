@@ -1,8 +1,13 @@
 public class Calculator {
     public String add(String value){
+        Integer sum = 0;
+        String[] values = value.split(",");
         if(value.isEmpty()){
             return "0";
         }
-        return value;
+        for(String stringValue:values){
+            sum+=Integer.parseInt(stringValue);
+        }
+        return sum.toString();
     }
 }
