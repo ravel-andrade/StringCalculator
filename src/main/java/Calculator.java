@@ -3,10 +3,20 @@ public class Calculator {
         if(!value.isEmpty() && value.charAt(value.length()-1)==','){
             return "1,3, is invalid and should return the message Number expected but EOF found.";
         }
-        if(value.contains(",\n")){
+        if(checkIfLastCharIsSeparator(value)){
             return getIllegalCharPosition(value);
         }
         return getSum(value);
+    }
+
+    private boolean checkIfLastCharIsSeparator(String value){
+        if(value.isEmpty()){
+            return false;
+        }
+        if(value.charAt(value.length()-1)==',' || value.charAt(value.length()-1)=='\n'){
+            return true;
+        }
+        return false;
     }
 
     private String getIllegalCharPosition(String value){

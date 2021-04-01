@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestStringCalculator" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-01T18:13:50" hostname="PC-ubuntu" time="0.022">
+<testsuite name="TestStringCalculator" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-01T18:19:19" hostname="PC-ubuntu" time="0.028">
   <properties/>
-  <testcase name="testAddWithNumbers()" classname="TestStringCalculator" time="0.014"/>
+  <testcase name="testAddWithNumbers()" classname="TestStringCalculator" time="0.02"/>
   <testcase name="testNewLineAfterComma()" classname="TestStringCalculator" time="0.001"/>
   <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.001"/>
   <testcase name="testLastCharAsComma()" classname="TestStringCalculator" time="0.001"/>
