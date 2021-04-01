@@ -27,4 +27,10 @@ public class TestStringCalculator {
         value="1\n2";
         Assertions.assertEquals(calculator.add(value), "3.0");
     }
+
+    @Test
+    public void testNewLineAfterComma(){
+        value="1,\n";
+        Assertions.assertEquals(calculator.add(value), "Number expected but '\\n' found at position 6.");
+    }
 }
