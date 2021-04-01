@@ -31,6 +31,6 @@ public class TestStringCalculator {
     @Test
     public void testNewLineAfterComma(){
         value="1,\n";
-        Assertions.assertEquals(calculator.add(value), "Number expected but '\\n' found at position 6.");
+        Assertions.assertEquals(calculator.add(value), "Number expected but '\\n' found at position 2.");
     }
 }

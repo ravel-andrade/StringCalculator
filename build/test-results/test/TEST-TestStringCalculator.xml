@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestStringCalculator" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-04-01T18:00:52" hostname="PC-ubuntu" time="0.023">
+<testsuite name="TestStringCalculator" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-04-01T18:05:10" hostname="PC-ubuntu" time="0.021">
   <properties/>
-  <testcase name="testAddWithNumbers()" classname="TestStringCalculator" time="0.016"/>
-  <testcase name="testNewLineAfterComma()" classname="TestStringCalculator" time="0.0"/>
-  <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.001"/>
+  <testcase name="testAddWithNumbers()" classname="TestStringCalculator" time="0.015"/>
+  <testcase name="testNewLineAfterComma()" classname="TestStringCalculator" time="0.001"/>
+  <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.0"/>
   <testcase name="testAddWithDoubleValue()" classname="TestStringCalculator" time="0.001"/>
   <testcase name="testNewLineSeparator()" classname="TestStringCalculator" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
