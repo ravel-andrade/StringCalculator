@@ -3,6 +3,7 @@ public class Calculator {
         if(checkIfLastCharIsSeparator(value)){
             return getIllegalCharPosition(value);
         }
+
         return getSum(value);
     }
 
@@ -26,7 +27,14 @@ public class Calculator {
 
     private String getSum(String value){
         Double sum = 0.0;
-        String[] values = value.split(",|\n");
+        String[] values;
+        if(value.startsWith("//")){
+            String separator = value.substring(2,value.indexOf("\n"));
+            values = value.substring(value.indexOf("\n")+1).split(separator);
+        }else{
+            values = value.split(",|\n");
+        }
+
         if(value.isEmpty()){
             return "0";
         }

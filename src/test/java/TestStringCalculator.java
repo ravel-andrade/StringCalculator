@@ -42,7 +42,7 @@ public class TestStringCalculator {
 
     @Test
     public void testCustomSeparator(){
-        value="//a\1a2";
-        Assertions.assertEquals(value, "3.0");
+        value="//a\n1a2";
+        Assertions.assertEquals(calculator.add(value), "3.0");
     }
 }
