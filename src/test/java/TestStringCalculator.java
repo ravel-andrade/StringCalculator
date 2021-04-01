@@ -36,7 +36,7 @@ public class TestStringCalculator {
 
     @Test
     public void testLastCharAsComma(){
-        value="1,";
+        value="1,3,";
         Assertions.assertEquals(calculator.add(value), "1,3, is invalid and should return the message Number expected but EOF found.");
     }
 }

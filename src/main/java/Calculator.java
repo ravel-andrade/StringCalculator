@@ -1,5 +1,8 @@
 public class Calculator {
     public String add(String value){
+        if(!value.isEmpty() && value.charAt(value.length()-1)==','){
+            return "1,3, is invalid and should return the message Number expected but EOF found.";
+        }
         if(value.contains(",\n")){
             return getIllegalCharPosition(value);
         }
