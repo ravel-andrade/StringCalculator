@@ -27,14 +27,7 @@ public class Calculator {
 
     private String getSum(String value){
         Double sum = 0.0;
-        String[] values;
-        if(value.startsWith("//")){
-            String separator = value.substring(2,value.indexOf("\n"));
-            values = value.substring(value.indexOf("\n")+1).split(separator);
-        }else{
-            values = value.split(",|\n");
-        }
-
+        String[] values = getValues(value);
         if(value.isEmpty()){
             return "0";
         }
@@ -42,5 +35,16 @@ public class Calculator {
             sum+=Double.parseDouble(stringValue);
         }
         return sum.toString();
+    }
+
+    private String[] getValues(String value) {
+        String[] values;
+        if(value.startsWith("//")){
+            String separator = value.substring(2,value.indexOf("\n"));
+            values = value.substring(value.indexOf("\n")+1).split(separator);
+        }else{
+            values = value.split(",|\n");
+        }
+        return values;
     }
 }
