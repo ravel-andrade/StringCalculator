@@ -2,12 +2,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestStringCalculator {
-
+    Calculator calculator = new Calculator();
+    String value = new String();
     @Test
     public void testAddWithString(){
-        String value = "a";
-        Assertions.assertEquals(Calculator.add(value), "a");
+        value = "a";
+        Assertions.assertEquals(calculator.add(value), "a");
     }
-
-
+    @Test
+    public void testAddWithEmptyString(){
+        Assertions.assertEquals(value, "0");
+    }
 }
