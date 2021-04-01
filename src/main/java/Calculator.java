@@ -1,8 +1,5 @@
 public class Calculator {
     public String add(String value){
-        if(!value.isEmpty() && value.charAt(value.length()-1)==','){
-            return "1,3, is invalid and should return the message Number expected but EOF found.";
-        }
         if(checkIfLastCharIsSeparator(value)){
             return getIllegalCharPosition(value);
         }
@@ -20,6 +17,9 @@ public class Calculator {
     }
 
     private String getIllegalCharPosition(String value){
+        if(value.charAt(value.length()-1)==','){
+            return value+" is invalid and should return the message Number expected but EOF found.";
+        }
         int position = value.indexOf(",\n")+1;
         return "Number expected but '\\n' found at position "+position+".";
     }
