@@ -33,4 +33,10 @@ public class TestStringCalculator {
         value="1,\n";
         Assertions.assertEquals(calculator.add(value), "Number expected but '\\n' found at position 2.");
     }
+
+    @Test
+    public void testLastCharAsComma(){
+        value="1,";
+        Assertions.assertEquals(calculator.add(value), "1,3, is invalid and should return the message Number expected but EOF found.");
+    }
 }
