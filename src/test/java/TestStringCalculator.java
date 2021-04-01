@@ -11,6 +11,6 @@ public class TestStringCalculator {
     }
     @Test
     public void testAddWithEmptyString(){
-        Assertions.assertEquals(value, "0");
+        Assertions.assertEquals(calculator.add(value), "0");
     }
 }

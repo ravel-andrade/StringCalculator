@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestStringCalculator" tests="2" skipped="0" failures="1" errors="0" timestamp="2021-04-01T17:32:37" hostname="PC-ubuntu" time="0.016">
+<testsuite name="TestStringCalculator" tests="2" skipped="0" failures="1" errors="0" timestamp="2021-04-01T17:34:28" hostname="PC-ubuntu" time="0.017">
   <properties/>
-  <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.014">
+  <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.015">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;&gt; but was: &lt;0&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
