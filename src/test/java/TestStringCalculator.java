@@ -21,4 +21,10 @@ public class TestStringCalculator {
         value="1.1";
         Assertions.assertEquals(calculator.add(value), "1.1");
     }
+
+    @Test
+    public void testNewLineSeparator(){
+        value="1\n2";
+        Assertions.assertEquals(calculator.add(value), "3.0");
+    }
 }
