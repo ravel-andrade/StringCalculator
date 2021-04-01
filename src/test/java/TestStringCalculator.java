@@ -39,4 +39,10 @@ public class TestStringCalculator {
         value="1,3,";
         Assertions.assertEquals(calculator.add(value), "1,3, is invalid and should return the message Number expected but EOF found.");
     }
+
+    @Test
+    public void testCustomSeparator(){
+        value="//a\1a2";
+        Assertions.assertEquals(value, "3.0");
+    }
 }
