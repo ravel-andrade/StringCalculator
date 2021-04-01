@@ -15,4 +15,10 @@ public class TestStringCalculator {
         value ="1,2";
         Assertions.assertEquals(calculator.add(value), "3");
     }
+
+    @Test
+    public void testAddWithDoubleValue(){
+        value="1.1";
+        Assertions.assertEquals(calculator.add(value), "1.1");
+    }
 }
