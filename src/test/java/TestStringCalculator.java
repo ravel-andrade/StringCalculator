@@ -13,7 +13,7 @@ public class TestStringCalculator {
     @Test
     public void testAddWithNumbers(){
         value ="1,2";
-        Assertions.assertEquals(calculator.add(value), "3");
+        Assertions.assertEquals(calculator.add(value), "3.0");
     }
 
     @Test

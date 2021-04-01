@@ -4,13 +4,13 @@ public class Calculator {
     }
 
     private String getSum(String value){
-        Integer sum = 0;
+        Double sum = 0.0;
         String[] values = value.split(",");
         if(value.isEmpty()){
             return "0";
         }
         for(String stringValue:values){
-            sum+=Integer.parseInt(stringValue);
+            sum+=Double.parseDouble(stringValue);
         }
         return sum.toString();
     }
