@@ -58,4 +58,10 @@ public class TestStringCalculator {
         Assertions.assertEquals(calculator.add(value), value+" is invalid and should return the message 'a' " +
                                                             "expected but ',' found at position 8.");
     }
+
+    @Test
+    public void testAddWithNegativeNumbers(){
+        value="1,2,-3";
+        Assertions.assertEquals(calculator.add(value),value+"Negative not allowed : -3");
+    }
 }

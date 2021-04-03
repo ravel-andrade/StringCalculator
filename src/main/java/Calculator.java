@@ -39,6 +39,7 @@ public class Calculator {
         }
         String[] values = getValues(value);
 
+
         if(value.isEmpty()){
             return "0";
         }
