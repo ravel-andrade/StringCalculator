@@ -67,7 +67,7 @@ public class TestStringCalculator {
 
     @Test
     public void testAddWithMultipleErrors(){
-        value="1,\n-2";
-        Assertions.assertEquals(calculator.add(value),"Number expected but '\\n' found at position 2.\nNegative not allowed : -3");
+        value="1,-2,\n";
+        Assertions.assertEquals(calculator.add(value),"Number expected but '\\n' found at position 5.Negative not allowed : -2");
     }
 }

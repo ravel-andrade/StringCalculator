@@ -1,9 +1,9 @@
 public class Calculator {
-
+    ErrorHandler errorHandler = new ErrorHandler();
 
     public String add(String value){
         if(checkIfLastCharIsSeparator(value)){
-            return getIllegalCharPosition(value);
+            registerErrorLastCharIsSeparator(value);
         }
         return getSum(value);
     }
@@ -19,17 +19,24 @@ public class Calculator {
     }
 
     private String getIllegalCharPosition(String value){
+        String index = new String();
         if(hasCustomSeparator(value)){
             if(value.contains(",")){
-                Integer index = value.indexOf(",")+1;
-                return index.toString();
+                Integer indexOf = value.indexOf(",")+1;
+                index = indexOf.toString();
             }
         }
+        return index;
+    }
+
+    private void registerErrorLastCharIsSeparator(String value){
         if(value.charAt(value.length()-1)==','){
-            return value+" is invalid and should return the message Number expected but EOF found.";
+            errorHandler.add(value+" is invalid and should return the message Number expected but EOF found.");
         }
-        int position = value.indexOf(",\n")+1;
-        return "Number expected but '\\n' found at position "+position+".";
+        if(value.contains(",\n")) {
+            int position = value.indexOf(",\n") + 1;
+            errorHandler.add("Number expected but '\\n' found at position " + position + ".");
+        }
     }
 
     private String getSum(String value){
@@ -45,13 +52,21 @@ public class Calculator {
         }
 
         if(hasNegativeNumbers(values)){
-            return "Negative not allowed :"+getNegativeNumbers(values);
+            errorHandler.add("Negative not allowed :"+getNegativeNumbers(values));
+
         }
 
         for(String stringValue:values){
             sum+=Double.parseDouble(stringValue);
         }
+
+        if(errorHandler.isEmpty()){
+
         return sum.toString();
+        }else{
+
+            return errorHandler.listErrors();
+        }
     }
 
     private String getNegativeNumbers(String[] values) {
