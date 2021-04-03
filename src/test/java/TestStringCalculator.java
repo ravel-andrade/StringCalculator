@@ -62,6 +62,6 @@ public class TestStringCalculator {
     @Test
     public void testAddWithNegativeNumbers(){
         value="1,2,-3";
-        Assertions.assertEquals(calculator.add(value),value+"Negative not allowed : -3");
+        Assertions.assertEquals(calculator.add(value),"Negative not allowed : -3");
     }
 }

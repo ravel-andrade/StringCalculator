@@ -39,15 +39,38 @@ public class Calculator {
         }
         String[] values = getValues(value);
 
-
         if(value.isEmpty()){
             return "0";
         }
+
+        if(hasNegativeNumbers(values)){
+            return "Negative not allowed :"+getNegativeNumbers(values);
+        }
+
         for(String stringValue:values){
-            System.out.println(stringValue);
             sum+=Double.parseDouble(stringValue);
         }
         return sum.toString();
+    }
+
+    private String getNegativeNumbers(String[] values) {
+        String negativeNumbers ="";
+        for(String stringValue:values){
+            if(Double.parseDouble(stringValue)<0){
+                negativeNumbers = negativeNumbers.concat(" "+stringValue);
+            }
+        }
+        return negativeNumbers;
+    }
+
+    private boolean hasNegativeNumbers(String[] values) {
+
+        for(String stringValue:values){
+            if(Double.parseDouble(stringValue)<0){
+                return true;
+            }
+        }
+       return false;
     }
 
     private String getIllegalSeparatorMessage(String value) {
@@ -81,7 +104,6 @@ public class Calculator {
         }
         return values;
     }
-
     private String getStringSeparator(String value) {
         return value.substring(2,value.indexOf("\n"));
     }
