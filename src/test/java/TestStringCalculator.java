@@ -64,4 +64,10 @@ public class TestStringCalculator {
         value="1,2,-3";
         Assertions.assertEquals(calculator.add(value),"Negative not allowed : -3");
     }
+
+    @Test
+    public void testAddWithMultipleErrors(){
+        value="1,\n-2";
+        Assertions.assertEquals(calculator.add(value),"Number expected but '\\n' found at position 2.\nNegative not allowed : -3");
+    }
 }

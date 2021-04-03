@@ -1,5 +1,6 @@
 public class Calculator {
 
+
     public String add(String value){
         if(checkIfLastCharIsSeparator(value)){
             return getIllegalCharPosition(value);
@@ -91,7 +92,6 @@ public class Calculator {
         }
             return false;
         }
-
 
     private String[] getValues(String value) {
         String[] values;
