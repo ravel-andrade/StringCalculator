@@ -6,6 +6,12 @@ public class TestStringCalculator {
     String value = new String();
 
     @Test
+    public void testNumbersQuantity(){
+        String values = "1,2,3,4";
+        Assertions.assertEquals(calculator.add(values),"10.0");
+    }
+
+    @Test
     public void testAddWithEmptyString(){
         Assertions.assertEquals(calculator.add(value), "0");
     }
@@ -44,5 +50,12 @@ public class TestStringCalculator {
     public void testCustomSeparator(){
         value="//a\n1a2";
         Assertions.assertEquals(calculator.add(value), "3.0");
+    }
+
+    @Test
+    public void testWrongCustomSeparator(){
+        value="//a\n1a2,3";
+        Assertions.assertEquals(calculator.add(value), value+" is invalid and should return the message 'a' " +
+                                                            "expected but ',' found at position 8.");
     }
 }

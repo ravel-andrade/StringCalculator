@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestStringCalculator" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-04-01T18:57:52" hostname="PC-ubuntu" time="0.023">
+<testsuite name="TestStringCalculator" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-04-03T15:49:00" hostname="PC-ubuntu" time="0.026">
   <properties/>
-  <testcase name="testAddWithNumbers()" classname="TestStringCalculator" time="0.013"/>
+  <testcase name="testAddWithNumbers()" classname="TestStringCalculator" time="0.015"/>
   <testcase name="testNewLineAfterComma()" classname="TestStringCalculator" time="0.001"/>
-  <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.001"/>
+  <testcase name="testAddWithEmptyString()" classname="TestStringCalculator" time="0.0"/>
   <testcase name="testLastCharAsComma()" classname="TestStringCalculator" time="0.001"/>
   <testcase name="testCustomSeparator()" classname="TestStringCalculator" time="0.001"/>
   <testcase name="testAddWithDoubleValue()" classname="TestStringCalculator" time="0.001"/>
-  <testcase name="testNewLineSeparator()" classname="TestStringCalculator" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testNumbersQuantity()" classname="TestStringCalculator" time="0.001"/>
+  <testcase name="testNewLineSeparator()" classname="TestStringCalculator" time="0.0"/>
+  <testcase name="testWrongCustomSeparator()" classname="TestStringCalculator" time="0.001"/>
+  <system-out><![CDATA[1
+2
+1
+2
+1.1
+1
+2
+3
+4
+1
+2
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
